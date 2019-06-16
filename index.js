@@ -82,19 +82,23 @@ controller.on('rtm_close', function (bot) {
 // BEGIN EDITING HERE!
 
 controller.on('bot_channel_join', function (bot, message) {
-    bot.reply(message, "I'm here!")
+    //bot.reply(message, "I'm here!")
 });
 
-controller.hears('hello', 'direct_message', function (bot, message) {
-    bot.reply(message, 'Hello!');
+controller.hears('Build uploaded - ', 'bot_message', function (bot, message) {
+	if(message.username != "Lidler" || message.channel != "CK8S41RCK") return;
+	
+	var split = message.text.split("master-");
+	var changeset = split[1].split(".");
+    bot.reply(message, "-changeset - " + changeset[0]);
+    bot.reply(message, "-------------------------------------------");
 });
-
 
 /**
  * AN example of what could be:
  * Any un-handled direct mention gets a reaction and a pat response!
  */
-//controller.on('direct_message,mention,direct_mention', function (bot, message) {
+//.on('direct_message,mention,direct_mention', function (bot, message) {
 //    bot.api.reactions.add({
 //        timestamp: message.ts,
 //        channel: message.channel,
