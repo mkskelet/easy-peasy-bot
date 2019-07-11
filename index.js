@@ -95,7 +95,7 @@ controller.hears('Build uploaded - ', 'bot_message', function (bot, message) {
 });
 
 controller.hears('kocicka', ["direct_message","direct_mention","mention","ambient"], function (bot, message) {
-    var number = Math.floor(Math.random() * (high - low) + low)
+    var number = Math.floor(Math.random() * (high - low) + low);
     bot.reply(message, "https://www.catgifpage.com/gifs/" + number.toString() + ".gif");
 }
 
