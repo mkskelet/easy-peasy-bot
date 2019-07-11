@@ -94,12 +94,12 @@ controller.hears('Build uploaded - ', 'bot_message', function (bot, message) {
     bot.reply(message, "-------------------------------------------");
 });
 
-controller.hears('kocicka', ["direct_message","direct_mention","mention","ambient"], function (bot, message) {
+controller.hears(["kocka", "kocicka", "macka", "cici", "kočička", "čičí", "čiči", "mňau", "mnau", "mačka", "kotě", "koťátko", "kote", "kotatko", "nunu", "ňuňu"], ["direct_message","direct_mention","mention","ambient"], function (bot, message) {
     var number = Math.floor(Math.random() * (320 - 1) + 1);
     bot.reply(message, "https://www.catgifpage.com/gifs/" + number.toString() + ".gif");
 });
 
-controller.hears('havo', ["direct_message","direct_mention","mention","ambient"], function (bot, message) {
+controller.hears(["havo", "pes", "havko", "psik", "peso", "hafan"], ["direct_message","direct_mention","mention","ambient"], function (bot, message) {
     var number = Math.floor(Math.random() * (150 - 1) + 1);
     bot.reply(message, "https://www.doggifpage.com/gifs/" + number.toString() + ".gif");
 });
