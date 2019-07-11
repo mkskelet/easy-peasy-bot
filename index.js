@@ -95,8 +95,13 @@ controller.hears('Build uploaded - ', 'bot_message', function (bot, message) {
 });
 
 controller.hears('kocicka', ["direct_message","direct_mention","mention","ambient"], function (bot, message) {
-    var number = Math.floor(Math.random() * (300 - 1) + 1);
+    var number = Math.floor(Math.random() * (320 - 1) + 1);
     bot.reply(message, "https://www.catgifpage.com/gifs/" + number.toString() + ".gif");
+});
+
+controller.hears('havo', ["direct_message","direct_mention","mention","ambient"], function (bot, message) {
+    var number = Math.floor(Math.random() * (150 - 1) + 1);
+    bot.reply(message, "https://www.doggifpage.com/gifs/" + number.toString() + ".gif");
 });
 
 /**
