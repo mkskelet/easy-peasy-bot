@@ -94,6 +94,11 @@ controller.hears('Build uploaded - ', 'bot_message', function (bot, message) {
     bot.reply(message, "-------------------------------------------");
 });
 
+controller.hears('kocicka', ["direct_message","direct_mention","mention","ambient"], function (bot, message) {
+    var number = Math.floor(Math.random() * (high - low) + low)
+    bot.reply(message, "https://www.catgifpage.com/gifs/" + number.toString() + ".gif");
+}
+
 /**
  * AN example of what could be:
  * Any un-handled direct mention gets a reaction and a pat response!
